@@ -1,99 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<title>Meetings & Events | Upstate SC Young Birders</title>
+
+<style>
+:root{
+  --blue:#4f8fc7;
+  --deep-blue:#274b6d;
+  --orange:#d9823b;
+  --cream:#f8f4ec;
+  --soft-blue:#e8f1f8;
+  --soft-orange:#fff1e5;
+  --ink:#1f2a33;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  background:linear-gradient(180deg, var(--cream), #ffffff);
+  color:var(--ink);
+  font-family:Georgia, serif;
+  line-height:1.7;
+}
+
+nav{
+  position:sticky;
+  top:0;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:.9rem 6vw;
+  background:rgba(248,244,236,.92);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid rgba(39,75,109,.12);
+  z-index:20;
+}
+
+.logo img{
+  width:54px;
+}
+
+nav ul{
+  display:flex;
+  gap:1.4rem;
+  list-style:none;
+}
+
+nav a{
+  text-decoration:none;
+  color:var(--deep-blue);
+  font-family:Arial, sans-serif;
+  text-transform:uppercase;
+  letter-spacing:.08em;
+  font-size:.72rem;
+}
+
+header{
+  padding:7rem 8vw 5rem;
+  background:
+    radial-gradient(circle at top left, rgba(79,143,199,.18), transparent 35%),
+    radial-gradient(circle at bottom right, rgba(217,130,59,.16), transparent 35%);
+}
+
+.hero{
+  max-width:760px;
+}
+
+.small{
+  color:var(--orange);
+  text-transform:uppercase;
+  letter-spacing:.16em;
+  font-family:Arial, sans-serif;
+  font-size:.72rem;
+  margin-bottom:1rem;
+}
+
+h1{
+  color:var(--deep-blue);
+  font-size:clamp(2.4rem,5vw,4.3rem);
+  font-weight:400;
+  line-height:1.05;
+  margin-bottom:1.2rem;
+}
+
+.hero p{
+  max-width:620px;
+  font-size:1.05rem;
+}
+
+main{
+  padding:4rem 8vw 5rem;
+}
+
+.meeting{
+  position:relative;
+  background:rgba(255,255,255,.82);
+  padding:2.2rem;
+  border-radius:1.4rem;
+  border:1px solid rgba(79,143,199,.16);
+  margin-bottom:2rem;
+  box-shadow:0 18px 45px rgba(39,75,109,.08);
+  overflow:hidden;
+}
+
+.meeting::before{
+  content:"";
+  position:absolute;
+  top:0;
+  left:0;
+  width:7px;
+  height:100%;
+  background:linear-gradient(var(--blue), var(--orange));
+}
+
+.date{
+  color:var(--orange);
+  text-transform:uppercase;
+  letter-spacing:.13em;
+  font-family:Arial, sans-serif;
+  font-size:.72rem;
+  margin-bottom:.8rem;
+}
+
+.meeting h2{
+  color:var(--deep-blue);
+  font-weight:400;
+  font-size:1.75rem;
+  margin-bottom:1rem;
+}
+
+.meeting p{
+  max-width:850px;
+  margin-bottom:.9rem;
+}
+
+.meeting ul{
+  margin-left:1.2rem;
+  margin-top:.8rem;
+}
+
+.tag{
+  display:inline-block;
+  margin-bottom:1rem;
+  padding:.35rem .75rem;
+  border-radius:999px;
+  background:var(--soft-blue);
+  color:var(--deep-blue);
+  font-family:Arial, sans-serif;
+  font-size:.68rem;
+  text-transform:uppercase;
+  letter-spacing:.08em;
+}
+
+.note{
+  margin-top:1.2rem;
+  padding:1rem 1.2rem;
+  border-radius:1rem;
+  background:var(--soft-orange);
+  border:1px solid rgba(217,130,59,.18);
+}
+
+footer{
+  background:var(--deep-blue);
+  color:white;
+  padding:2rem 8vw;
+  font-family:Arial, sans-serif;
+  font-size:.85rem;
+}
+
+@media(max-width:700px){
+  nav{
+    flex-direction:column;
+    gap:1rem;
+  }
+
+  nav ul{
+    flex-wrap:wrap;
+    justify-content:center;
+  }
+
+  .meeting{
+    padding:1.6rem;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+  <a class="logo" href="index.html">
+    <img src="logo.png" alt="Upstate SC Young Birders logo">
+  </a>
+
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="resources.html">Resources</a></li>
+    <li><a href="join.html">Join</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+<header>
+  <div class="hero">
+    <p class="small">Meetings & Events</p>
+    <h1>Field walks, outings, and observations.</h1>
+    <p>
+      Updates from Upstate SC Young Birders meetings, bird walks, and informal outings around the Upstate.
+    </p>
+  </div>
+</header>
+
 <main>
 
 <div class="meeting">
-
+  <span class="tag">Upcoming Meeting</span>
   <p class="date">June 25, 2026</p>
-
   <h2>Conestee Nature Preserve Bird Walk</h2>
 
   <p>
     Our June meeting will be held at Conestee Nature Preserve at 8:30 a.m.
-    Members of the Greenville County Bird Club (GCBC) will be guiding us around
-    the preserve and helping us identify birds.
+    Members of the Greenville County Bird Club will be guiding us around the preserve
+    and helping us identify birds.
   </p>
 
   <p>
-    Betsy Lewis, one of our mentors and the president of GCBC, helped organize
-    this outing. We are grateful to Betsy and the other GCBC members for sharing
-    their time and knowledge with our group.
+    We hope to see wetland birds such as Red-winged Blackbirds, herons, and Swamp Sparrows,
+    as well as woodland birds like Red-eyed Vireos and a variety of warblers.
   </p>
 
-  <p>
-    We hope to see wetland birds such as Red-winged Blackbirds, herons, and
-    Swamp Sparrows, as well as woodland birds like Red-eyed Vireos and a variety
-    of warblers.
-  </p>
-
-  <img src="conestee-flyer.png" alt="Conestee Nature Preserve Meeting Flyer">
-
+  <div class="note">
+    Parents are responsible for their children at all times during this outing.
+  </div>
 </div>
 
 <div class="meeting">
-
+  <span class="tag">Informal Walk</span>
   <p class="date">June 9, 2026</p>
-
   <h2>Table Rock State Park Bird Walk</h2>
 
   <p>
-    Since there was a long gap between official meetings, we organized an
-    informal bird walk at Table Rock State Park along the Lakeside Trail.
+    Since there was a long gap between official meetings, we planned an informal bird walk
+    at Table Rock State Park along the Lakeside Trail.
   </p>
 
   <p>
-    Participants introduced themselves, enjoyed a short walk around the lake,
-    discussed bird identification, and spent time birding together in a relaxed
-    setting.
+    The outing included introductions, a short walk, time to chat, and a few bird identification games.
   </p>
 
-  <p>
-    The outing provided an opportunity for members to connect before the next
-    official club meeting while exploring one of South Carolina's most scenic
-    state parks.
-  </p>
-
-  <img src="table-rock-flyer.png" alt="Table Rock State Park Bird Walk Flyer">
-
+  <div class="note">
+    Table Rock State Park has an entrance fee. Some local libraries offer state park passes that can be borrowed.
+  </div>
 </div>
 
 <div class="meeting">
-
+  <span class="tag">Past Meeting</span>
   <p class="date">May 2026</p>
-
   <h2>Clemson Botanical Garden Bird Walk</h2>
 
   <p>
-    Morning walk through the South Carolina Botanical Garden with the Winged
-    Wednesday group. Participants practiced bird identification, photography,
-    and observation skills.
+    Morning walk through the South Carolina Botanical Garden with the Winged Wednesday group.
+    Participants practiced bird identification, photography, and observation skills.
   </p>
 
-  <p>
-    Species observed included:
-  </p>
+  <p>Species observed included:</p>
 
-  <ul style="margin-left:1.2rem; margin-top:.8rem;">
+  <ul>
     <li>Carolina Wren</li>
     <li>Northern Mockingbird</li>
     <li>Eastern Bluebird</li>
     <li>Red-bellied Woodpecker</li>
     <li>Canada Goose</li>
   </ul>
-
-  <img src="may-poster.png" alt="Botanical Garden Bird Walk">
-
 </div>
 
 <div class="meeting">
-
+  <span class="tag">Coming Soon</span>
   <p class="date">Future Meetings</p>
-
   <h2>More outings coming soon.</h2>
 
   <p>
-    Additional field walks, migration outings, photography meetups, and bird
-    identification workshops will be added here as they are planned.
+    Additional field walks, migration outings, photography meetups, and bird identification workshops
+    will be added here as they are planned.
   </p>
-
 </div>
 
 </main>
+
+<footer>
+  <p>© 2026 Upstate SC Young Birders Club</p>
+</footer>
+
+</body>
+</html>
